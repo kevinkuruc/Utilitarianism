@@ -13,7 +13,7 @@ The main files for solving:
 --running these will produce the csv files that have data on everything we eventually plot using STATA. Right now they have made the following changes to RICE2010:
 1) Population numbers are fixed to match updated data (I went directly into RICE excel worksheet to replace these)
 2) Savings rates have been changed to 0.258 rather than the data in excel. This was done in the parameters.jl files. I have commented out the reading in of savings rates and instead have put in a 60x12 matrix of 0.258.
-This gives you the two main flavors of changing parameters in the model. If there is not an easy way to do it within the parameters.jl file you will unfortunately need to go into the excel sheet, make the change by hand and save it. 
+3) Social rate of discount is changed to .008. You can see this in the Results_Utilitarian.jl file.. after calling the RICE model as its dictated in the excel sheet it changes the parameter using 'setparameter()' function.
 
 Important sub-codes:
 Optimize_UtilitarianRICE.jl
@@ -31,6 +31,3 @@ Misc:
 RunBAU.jl : Runs RICE with no climate policy
 Helpers.jl: defines functions that go in and read out data from excel into the format mimi likes. As long as this is kept in the src folder it shouldn’t need to be edited or opened.
 Note: We begin plotting in 2019 not 2015, so we just take a convex combination of our solutions for 2015 and 2025 to approximate 2019.
-DATA:
-Historical Emissions from:
-http://cdiac.ess-dive.lbl.gov/trends/emis/tre_coun.html
