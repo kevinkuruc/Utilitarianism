@@ -4,7 +4,7 @@ include("parameters_Utilitarian.jl")
 
 include("components_Utilitarian/climatedynamics_component.jl")
 include("components_Utilitarian/co2cycle_component.jl")
-include("components_Utilitarian/damages_component_extreme.jl")
+include("components_Utilitarian/damages_component.jl")
 include("components_Utilitarian/emissions_component.jl")
 include("components_Utilitarian/grosseconomy_component.jl")
 include("components_Utilitarian/neteconomy_component.jl")
