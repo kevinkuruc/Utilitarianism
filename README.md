@@ -15,7 +15,7 @@ Our model is built upon Nordhaus’ RICE 2010 model.  We made several slight mod
 1.	Population numbers are fixed to match updated data from the UN World Population Prospects.
 2.	Savings rates have been changed to 0.258, a fixed value. This is done in the parameters.jl file. (We commented out the reading in of savings rates and instead have put in a 60x12 matrix of 0.258).
 3.	The social rate of time preference (ρ) is changed to .008. You can see this in the Results_Utilitarian.jl file, for example, using 'setparameter()' function.
-(We have implemented the first two of these changes directly in the data file RICE_2010_base_000.xlsm ).
+> (We have implemented the first two of these changes directly in the data file RICE_2010_base_000.xlsm ).
 ## Code to Optimize: 
 - *Optimization routines:*  To find the optima, use these files.  We use Optimize_UtilitarianRICE.jl Optimize_CostMinRICE.jl to maximize welfare in RICE. These choose a policy to maximize the objective function, which is equation 1 in the supplemental materials.
 - *Model:* Rice2010_Utilitarian.jl: takes components and compiles them into a Mimi model. Rice2010_CostMin.jl: Does the same for the cost-min version.  RunBAU.jl runs RICE with no climate policy (Business as Usual.)
