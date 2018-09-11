@@ -7,8 +7,8 @@ We use Mimi, within the Julia environment with the following packages:
 -	DataFrames.jl
 -	CSV.jl
 -	NLopt.jl
-This software is all available for free download.  To download Mimi, for example, go to Julia and type the command Pkg.add(“Mimi.jl”)
-Our software:
+> This software is all available for free download.  To download Mimi, for example, go to Julia and type the command Pkg.add(“Mimi.jl”)
+- Our software:
 Our paper implements model runs under two scenarios: utilitarianism and cost-minimization.  We have a Julia file for each of these: “Results_Utilitarian.jl” and “Results_CostMin.jl” Running these will produce the csv files which contain our output.  We produced our final figures from these csv files by using Stata’s graphics features. 
 ## Modifications to RICE 2010:
 Our model is built upon Nordhaus’ RICE 2010 model.  We made several slight modifications:
