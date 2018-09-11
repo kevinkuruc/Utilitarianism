@@ -25,5 +25,5 @@ Defines each component. See Mimi codes on GitHub for tutorial on this way of com
 ### Data: 
 Parameters_Utilitarian.jl: Reads in the data file to the parameters of the Mimi Model Parameters_CostMin.jl: does the same for the one price version. (The data file is RICE_2010_base_000.xlsm ).
 ### File structure:  
-The RICE worksheet must be in a separate folder labelled DATA at the same folder level as the “src” file with the code within it.  Helpers.jl: defines functions that go in and read out data from excel into Mimi format; keep this in the src folder.
+The RICE worksheet must be in a separate folder labelled `data' at the same folder level as the “src” file with the code within it.  Helpers.jl: defines functions that go in and read out data from excel into Mimi format; keep this in the src folder.
 
