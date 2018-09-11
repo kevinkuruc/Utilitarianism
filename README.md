@@ -1,7 +1,7 @@
 # Solution Notes for 'Minimal utilitarian benchmarks for NDCs yield equity, climate, and development advantages.'
 
 This code provides the ability to replicate all modeling runs in the paper Budolfson et al. 2018 “Minimal utilitarian benchmarks for NDCs yield equity, climate, and development advantages.”  This code also would permit a user familiar with Mimi to implement further modeling runs under alternative assumptions, by changing our code. 
-## Software prerequisites. 
+## Software prerequisites
 We use Mimi, within the Julia environment with the following packages:  
 •	Mimi.jl
 •	DataFrames.jl
@@ -18,7 +18,7 @@ Our model is built upon Nordhaus’ RICE 2010 model.  We made several slight mod
 (We have implemented the first two of these changes directly in the data file RICE_2010_base_000.xlsm ).
 ## How to optimize:
 Optimization routines:  To find the optima, use these files.  We use Optimize_UtilitarianRICE.jl Optimize_CostMinRICE.jl to maximize welfare in RICE. These choose a policy to maximize the objective function, which is equation 1 in the supplemental materials.
-RICE Model: Rice2010_Utilitarian.jl: takes components and compiles them into a Mimi model. Rice2010_CostMin.jl: Does the same for the cost-min version.  RunBAU.jl runs RICE with no climate policy (Business as Usual.)
+\newline RICE Model: Rice2010_Utilitarian.jl: takes components and compiles them into a Mimi model. Rice2010_CostMin.jl: Does the same for the cost-min version.  RunBAU.jl runs RICE with no climate policy (Business as Usual.)
 Components Folders: Defines each component. See Mimi codes on GitHub for tutorial on this way of compiling IAMs. 
 Data: Parameters_Utilitarian.jl: Reads in the data file to the parameters of the Mimi Model Parameters_CostMin.jl: does the same for the one price version. (The data file is RICE_2010_base_000.xlsm ).
 File structure:  The RICE worksheet must be in a separate folder labelled DATA at the same folder level as the “src” file with the code within it.  Helpers.jl: defines functions that go in and read out data from excel into Mimi format; keep this in the src folder.
